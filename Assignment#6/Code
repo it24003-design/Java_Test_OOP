@@ -18,7 +18,7 @@ public class MathPractice {
         System.out.print("Enter Principal (P): ");
         double P = sc.nextInt();
         System.out.print("Enter Annual Interest Rate (r as a decimal): ");
-        int r = sc.nextInt();
+        double r = sc.nextDouble();
         System.out.print("Enter Number of Compounds per Year (n): ");
         int n = sc.nextInt();
         System.out.print("Enter Time in Years (t): ");
