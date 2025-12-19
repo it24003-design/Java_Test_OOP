@@ -1,1 +1,95 @@
+package ict._21.ClassNames;
 
+public class MainClass {
+    public static void main(String[] args) {
+        double sum = SumClass.instance.CalculationSum();
+        System.out.println("Sum = " + sum);
+
+        int a = 12, b = 18;
+        System.out.println("GCD = " + DivisorMultipleClass.instance.gcd(a, b));
+        System.out.println("LCM = " + DivisorMultipleClass.instance.lcm(a, b));
+
+        int num = 25;
+        System.out.println("Binary = " + NumberConversionClass.instance.decimalToBinary(num));
+        System.out.println("Hexa = " + NumberConversionClass.instance.decimalToHexa(num));
+        System.out.println("Octal = " + NumberConversionClass.instance.decimalToOctal(num));
+
+        CustomPrintClass.instance.pr();
+    }    
+}
+
+package ict._21.ClassNames;
+
+public class SumClass {
+    public static SumClass instance = new SumClass();
+    private SumClass() {}
+
+    public double CalculationSum() {
+        double sum = 0.0;
+        for(int i = 10; i >= 1; i--)  // floating-point issue fix
+            sum += i / 10.0;
+        return sum;
+    }
+}
+
+package ict._21.ClassNames;
+
+public class DivisorMultipleClass {
+    public static DivisorMultipleClass instance = new DivisorMultipleClass();
+    private DivisorMultipleClass() {}
+
+    public int gcd(int a, int b) {
+        while(b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public int lcm(int a, int b) {
+        return (a * b) / gcd(a, b);  
+    }
+}
+
+package ict._21.ClassNames;
+
+public class NumberConversionClass {
+    public static NumberConversionClass instance = new NumberConversionClass();
+    private NumberConversionClass() {}
+
+    public String decimalToBinary(int n) {
+        return Integer.toBinaryString(n);
+    }
+
+    public String decimalToHexa(int n) {
+        return Integer.toHexString(n);
+    }
+
+    public String decimalToOctal(int n) {
+        return Integer.toOctalString(n);
+    }
+
+    public int binaryToDecimal(String bin) {
+        return Integer.parseInt(bin, 2);
+    }
+
+    public int hexaToDecimal(String hex) {
+        return Integer.parseInt(hex, 16);
+    }
+
+    public int octalToDecimal(String oct) {
+        return Integer.parseInt(oct, 8);
+    }
+}
+
+package ict._21.ClassNames;
+
+public class CustomPrintClass {
+    public static CustomPrintClass instance = new CustomPrintClass();
+    private CustomPrintClass() {}
+
+    public void pr() {
+        System.out.println("Custom Print Method Called!");
+    }
+}
