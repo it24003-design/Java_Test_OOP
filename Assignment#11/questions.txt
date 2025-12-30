@@ -1,0 +1,5 @@
+What is the capital of Bangladesh?,Dhaka
+Who invented the light bulb?,Edison
+What planet is known as the Red Planet?,Mars
+How many continents are there?,7
+Who is the Father of Computer?,Charles Babbage

@@ -1,0 +1,2 @@
+Obayet,easy,15
+Obayet,medium,20
