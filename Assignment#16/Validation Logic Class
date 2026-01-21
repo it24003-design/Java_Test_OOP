@@ -1,0 +1,21 @@
+package validation.service;
+
+import validation.exceptions.InvalidDataException;
+
+public class Validator {
+
+    public void validateAge(int age) throws InvalidDataException {
+        if (age < 18 || age > 60) {
+            throw new InvalidDataException(
+                "Invalid Age! Age must be between 18 and 60."
+            );
+        }
+    }
+
+    public void validateDepartment(String dept) throws InvalidDataException {
+        if (!(dept.equals("CSE") || dept.equals("EEE")
+                || dept.equals("BBA") || dept.equals("ENG"))) {
+            throw new InvalidDataException("Invalid Department!");
+        }
+    }
+}
