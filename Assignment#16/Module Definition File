@@ -1,0 +1,5 @@
+module ValidationModule {
+    exports validation.main;
+    exports validation.service;
+    exports validation.exceptions;
+}
