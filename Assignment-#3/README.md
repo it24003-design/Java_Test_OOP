@@ -1,19 +1,14 @@
-import java.util.Scanner;
+public class AreaOfRectangular
+ {
+  public static void main(String[]  args)
+   {
+    double width = 4.5;
+    double height = 7.9;
+    
+    double Area = width*height;
+    double perimeter = 2*(width+height);
 
-public class AreaImport
-  {
-   public static void main(String[] args)
-	{
-	 double width,height;
-	 
-	 width = Double.parseDouble(args[0]);
-         height = Double.parseDouble(args[1]);
-
-	 double AreaOfRectangular = width*height;
-	 double perimeter = 2*(width+height);
-
-	 System.out.printf("Area of the rectanghular is: %.3f\n",AreaOfRectangular);
-	 System.out.printf("Perimeter of the rectangular is: %.3f",perimeter);
-
-	}
-  }
+    System.out.printf("Area of rectangular = %.3f\n",Area);
+    System.out.printf("Perimeter of Rectangular = %f",perimeter);
+    }
+ }
