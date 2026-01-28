@@ -29,13 +29,14 @@ public class CGPAGradeCalculation
 
 
     if(total1 >= 40)
-	creditEarned = creditEarned+credit;
+	    creditEarned = creditEarned+credit;
     else
-	creditEarned = creditEarned+0;
+	    creditEarned = creditEarned+0;
+
 
     if (total1 >= 80 && total1 <= 100)
     { 
-	cg = credit*4;
+	    cg = credit*4;
         TotalPoint = TotalPoint + cg;
     }
 
@@ -66,7 +67,7 @@ public class CGPAGradeCalculation
     else if (total1 >= 55 && total1 <= 59)
     {
         cg = 2.75*credit;
-	TotalPoint = TotalPoint + cg;
+	    TotalPoint = TotalPoint + cg;
     }
 
     else if (total1 >= 50 && total1 <= 54) 
@@ -122,7 +123,7 @@ public class CGPAGradeCalculation
   else if (twoDigit >= 2.00)
         System.out.println("Grade: D");
   else
-        System.out.println("Grade: F / R");  
+        System.out.println("Grade: F");  
  }
 }
   
